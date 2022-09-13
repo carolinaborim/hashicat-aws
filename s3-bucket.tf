@@ -1,13 +1,6 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+module "s3-bucket" {
+  source  = "app.terraform.io/HC_Prod_Carolina/s3-bucket/aws"
+  version = "1.0.0"
 
-  bucket = "my-s3-bucket"
-  acl    = "private"
   bucket_prefix = "carolinaborim"
-
-
-  versioning = {
-    enabled = true
-  }
-
 }
